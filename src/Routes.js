@@ -6,13 +6,16 @@ import Login from './screens/Login'
 
 const Tab = createBottomTabNavigator()
 
-export default function App() {
+export default function Routes() {
+
   return (
     <NavigationContainer>
+
       <Tab.Navigator>
-        <Tab.Screen name='Login' component={Login} />
-        <Tab.Screen name='Home' component={Home} />
+        <Tab.Screen name='Login' component={Login}/>
+        <Tab.Screen name='Home' component={Home}/>
       </Tab.Navigator>
+
     </NavigationContainer>
   )
 }
