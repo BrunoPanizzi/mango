@@ -2,7 +2,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Home from './screens/Home'
-import Login from './screens/Login'
+
+import Calendario from './screens/Calendario'
 
 const Tab = createBottomTabNavigator()
 
@@ -12,8 +13,10 @@ export default function Routes() {
     <NavigationContainer>
 
       <Tab.Navigator>
-        <Tab.Screen name='Login' component={Login}/>
+        
         <Tab.Screen name='Home' component={Home}/>
+        <Tab.Screen name='Calendario' component={Calendario}/>
+        
       </Tab.Navigator>
 
     </NavigationContainer>
