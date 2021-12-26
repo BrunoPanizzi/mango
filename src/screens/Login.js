@@ -1,15 +1,18 @@
 import { StyleSheet, Text, View, Image, TextInput} from 'react-native';
 
+//components
 import Logo from '../componentes/login/Logo';
-import Inputs from '../componentes/login/Inputs';
+import InputsContainer from '../componentes/login/InputsContainer';
+import Direitos from '../componentes/login/Direitos';
 
-import main from '../../Main'
+
 
 export default function Login() {
   return (
     <View style={styles.container}>
       <Logo/>
-      <Inputs/>
+      <InputsContainer/>
+      <Direitos/>
     </View>
   )
 }
@@ -21,6 +24,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width:'100%',
     height:'100%',
-    backgroundColor:main.mainColor,
+    backgroundColor:'white',
   }
 })
