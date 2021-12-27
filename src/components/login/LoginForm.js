@@ -1,3 +1,4 @@
+import { useContext } from 'react'
 import { View, Text, StyleSheet } from 'react-native';
 
 //import: components
@@ -7,7 +8,11 @@ import Button from '../Button'
 
 import defaultStyles from '../../assets/defaultStyles';
 
+import { AuthContext } from '../../contexts/AuthProvider'
+
 export default function LoginForm(){
+  const { handleAuthentication } = useContext(AuthContext)
+  
   return(
     <View style={styles.inputContainer}>
       <Text style={styles.loginText}>
@@ -18,7 +23,7 @@ export default function LoginForm(){
       <Text style={styles.forgotPassword}>
         Esqueceu sua senha?
       </Text>
-      <Button>
+      <Button onPress={handleAuthentication}>
         Login
       </Button>
     </View>

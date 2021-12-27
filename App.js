@@ -1,10 +1,14 @@
 import { StyleSheet } from 'react-native'
 
+import AuthProvider from './src/contexts/AuthProvider';
+
 import Routes from './src/Routes';
 
 export default function App() {
   return (
-    <Routes />
+    <AuthProvider>
+      <Routes />
+    </AuthProvider>
   )
 }
 
