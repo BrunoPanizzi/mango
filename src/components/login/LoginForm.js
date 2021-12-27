@@ -5,7 +5,7 @@ import InputEmail from './InputEmail';
 import InputPassword from './InputPassword';
 import Button from '../Button'
 
-import Main from '../../../Main';
+import defaultStyles from '../../assets/defaultStyles';
 
 export default function LoginForm(){
   return(
@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
   },
   loginText: {
     fontSize:38,
-    color:Main.mainColor,
+    color:defaultStyles.mainColor,
     marginVertical:20,
     textAlign:'center',
     fontWeight:'bold'
   },
   forgotPassword: {
-    color:Main.secondaryColor,
+    color:defaultStyles.secondaryColor,
     fontSize:16,
     textAlign:'center',
     marginVertical: 16

@@ -1,7 +1,7 @@
 import { View, Image, StyleSheet } from "react-native";
 
-import logo from '../../images/logo.png';
-import Main from "../../../Main";
+import logo from '../../assets/images/logo.png';
+import defaultStyles from "../../assets/defaultStyles";
 
 export default function Logo() {
 	return(
@@ -13,7 +13,7 @@ export default function Logo() {
 
 const styles = StyleSheet.create({
 	logoContainer:{
-		backgroundColor:Main.mainColor,
+		backgroundColor:defaultStyles.mainColor,
 		width:'100%',
     flex: 3,
 		justifyContent:'center',
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 		borderBottomLeftRadius:30,
 		borderBottomRightRadius:30,
 	},
-	  logo:{
+	logo:{
 		width:128,
 		height:128,
 	},

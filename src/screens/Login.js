@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Logo from '../components/login/Logo';
 import LoginForm from '../components/login/LoginForm';
 
-import Main from '../../Main'
+import defaultStyles from '../assets/defaultStyles';
 
 export default function Login() {
   return (
@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
     backgroundColor:'white',
   },
   text: {
-    color: Main.mainColor,
+    color: defaultStyles.mainColor,
   }
 })

@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity, StyleSheet } from "react-native"
 
 //main
-import Main from "../../Main"
+import defaultStyles from "../assets/defaultStyles"
 
 export default function Button({ children, onPress }){
 	return(
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 		alignItems:'center',
 		alignContent:'center',
 		justifyContent:'center',
-		backgroundColor:Main.secondaryColor,
+		backgroundColor:defaultStyles.secondaryColor,
 		borderRadius:30,
 	},
 	text:{
