@@ -1,18 +1,18 @@
-import { StyleSheet, Text, View, Image, TextInput} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 //components
-import Logo from '../componentes/login/Logo';
-import InputsContainer from '../componentes/login/InputsContainer';
-import Direitos from '../componentes/login/Direitos';
+import Logo from '../components/login/Logo';
+import LoginForm from '../components/login/LoginForm';
 
-
+import Main from '../../Main'
 
 export default function Login() {
   return (
     <View style={styles.container}>
       <Logo/>
-      <InputsContainer/>
-      <Direitos/>
+      <LoginForm/>
+      <Text style={styles.text}>Developed By </Text>
+      <Text style={[styles.text, {marginBottom: 8}]}>@AdrianHoff, @BrunoPanizziQ & Manuela Bergamaschi</Text>
     </View>
   )
 }
@@ -22,8 +22,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    width:'100%',
-    height:'100%',
     backgroundColor:'white',
+  },
+  text: {
+    color: Main.mainColor,
   }
 })
