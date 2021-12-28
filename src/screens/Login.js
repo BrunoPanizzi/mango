@@ -1,9 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native';
+
+//components
+import Logo from '../components/login/Logo';
+import LoginForm from '../components/login/LoginForm';
+
+import defaultStyles from '../assets/defaultStyles';
 
 export default function Login() {
   return (
     <View style={styles.container}>
-      <Text>Login </Text>
+      <Logo/>
+      <LoginForm/>
+      <Text style={styles.text}>Developed By </Text>
+      <Text style={[styles.text, {marginBottom: 8}]}>@AdrianHoff, @BrunoPanizziQ & Manuela Bergamaschi</Text>
     </View>
   )
 }
@@ -12,6 +21,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor:'white',
+  },
+  text: {
+    color: defaultStyles.mainColor,
   }
 })

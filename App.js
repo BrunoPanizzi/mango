@@ -1,21 +1,15 @@
 import { StyleSheet } from 'react-native'
 
+import AuthProvider from './src/contexts/AuthProvider';
+
 import Routes from './src/Routes';
-import Login from './src/screens/Login';
 
 export default function App() {
-
-  function penis(data) {
-    return true;
-  }
-  const auth = penis()
-  if(auth){
-    return (
+  return (
+    <AuthProvider>
       <Routes />
-    )
-  }else{
-    return <Login/>
-  }
+    </AuthProvider>
+  )
 }
 
 const styles = StyleSheet.create({})
