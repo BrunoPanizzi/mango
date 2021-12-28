@@ -61,6 +61,5 @@ const styles = StyleSheet.create({
   eye:{
     width:'100%',
     height:'100%',
-    color:defaultStyles.mainColor,
   }
 })

@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
+import Header from '../components/Header'
+
 import { AuthContext } from '../contexts/AuthProvider'
 
 export default function Home() {
