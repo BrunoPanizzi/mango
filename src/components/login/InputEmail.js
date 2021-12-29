@@ -13,13 +13,13 @@ const styles = StyleSheet.create({
 	input:{
 	  width:'100%',
 	  height:60,
-	  borderWidth:1,
-	  borderColor:defaultStyles.mainColor,
+	  borderWidth:2,
+	  borderColor:defaultStyles.secondaryColor,
 	  borderRadius:30,
-	  paddingLeft:10,
+	  paddingHorizontal: 24,
 	  lineHeight:20,
 	  fontSize:18,
 	  marginVertical:10,
-	  color:defaultStyles.mainColor,
+	  color:defaultStyles.textColor,
 	}
 })

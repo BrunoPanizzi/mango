@@ -33,18 +33,18 @@ export default function InputPassword() {
 }
 
 const styles = StyleSheet.create({
-  input:{
-    width:'100%',
-    height:60,
-    borderWidth:1,
-    borderColor:defaultStyles.mainColor,
-    borderRadius:30,
-    paddingLeft:10,
-    lineHeight:20,
-    fontSize:18,
-    marginTop:10,
-    color:defaultStyles.mainColor,
-  },
+	input:{
+	  width:'100%',
+	  height:60,
+	  borderWidth:2,
+	  borderColor:defaultStyles.secondaryColor,
+	  borderRadius:30,
+	  paddingHorizontal: 24,
+	  lineHeight:20,
+	  fontSize:18,
+	  marginVertical:10,
+	  color:defaultStyles.textColor,
+	},
   inputPasswordContainer:{
     width:'100%',
     

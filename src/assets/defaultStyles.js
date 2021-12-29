@@ -1,8 +1,8 @@
 const main = {
-    mainColor:'#272636',
-    // mainColor:'#394d64',
-    secondaryColor:'#FB0066',
-    // secondaryColor:'#f73c3c'
+    backgroundColor: '#fff',
+    mainColor:'#97dbab',
+    secondaryColor:'#444',
+    textColor: '#222'
 }
 
 export default { ...main }

@@ -11,8 +11,7 @@ export default function Login() {
     <View style={styles.container}>
       <Logo/>
       <LoginForm/>
-      <Text style={styles.text}>Developed By </Text>
-      <Text style={[styles.text, {marginBottom: 8}]}>@AdrianHoff, @BrunoPanizziQ & Manuela Bergamaschi</Text>
+    
     </View>
   )
 }
@@ -22,9 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor:'white',
+    backgroundColor: defaultStyles.backgroundColor
   },
-  text: {
-    color: defaultStyles.mainColor,
-  }
+
 })

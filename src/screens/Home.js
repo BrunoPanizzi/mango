@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
-import Header from '../components/Header'
+import defaultStyles from '../assets/defaultStyles'
 
 import { AuthContext } from '../contexts/AuthProvider'
 
@@ -22,10 +22,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: defaultStyles.backgroundColor
   },
   button: {
-    backgroundColor: 'green',
+    backgroundColor: defaultStyles.mainColor,
     padding: 8 
   }
 })
