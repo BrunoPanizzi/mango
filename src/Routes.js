@@ -16,7 +16,7 @@ export default function Routes() {
         
         <Tab.Screen name='Home' component={Home}/>
         <Tab.Screen name='Calendario' component={Calendario}/>
-        
+
       </Tab.Navigator>
 
     </NavigationContainer>

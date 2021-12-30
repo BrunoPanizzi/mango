@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
       borderWidth:1,
       borderColor:Main.mainColor,
       borderRadius:30,
-      paddingLeft:10,
+      paddingLeft:25,
       lineHeight:20,
       fontSize:18,
       marginTop:10,
