@@ -4,16 +4,16 @@ import { View, Text, StyleSheet, Animated } from 'react-native';
 //import: components
 import InputEmail from './InputEmail';
 import InputPassword from './InputPassword';
-import Button from '../Button'
+import Button from '../Button';
 
 import defaultStyles from '../../assets/defaultStyles';
 
 import { AuthContext } from '../../contexts/AuthProvider'
 
-export default function LoginForm(){
+export default function LoginForm() {
   const { handleAuthentication } = useContext(AuthContext)
   const animation = useRef(new Animated.Value(0)).current
-  
+
   useEffect(() => {
     Animated.timing(animation, {
       toValue: 1,
@@ -21,26 +21,26 @@ export default function LoginForm(){
       useNativeDriver: false
     }).start()
   }, [])
-  
-  return(
+
+  return (
     <Animated.View
       style={[
-        styles.container, 
+        styles.container,
         {
-          opacity: animation, 
+          opacity: animation,
           flex: animation.interpolate({
-            inputRange: [0, 1], 
-            outputRange:[0, 7]
+            inputRange: [0, 1],
+            outputRange: [0, 7]
           })
         }
       ]}
     >
-      <View style={{flex: 1, width: '100%'}}>
+      <View style={{ flex: 1, width: '100%' }}>
         <Text style={styles.loginText}>
           Login
         </Text>
-        <InputEmail/>
-        <InputPassword/>
+        <InputEmail />
+        <InputPassword />
         <Text style={styles.forgotPassword}>
           Esqueceu sua senha?
         </Text>
@@ -57,25 +57,25 @@ export default function LoginForm(){
 }
 
 const styles = StyleSheet.create({
-  container:{
-    width:'100%',
-    padding:10,
+  container: {
+    width: '100%',
+    padding: 10,
     alignItems: 'center',
-    backgroundColor: defaultStyles.mainColor,
-    borderTopLeftRadius:30,
-		borderTopRightRadius:30,
+    backgroundColor: 'white',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
   },
   loginText: {
-    fontSize:38,
-    color:defaultStyles.secondaryColor,
-    marginVertical:20,
-    textAlign:'center',
-    fontWeight:'bold'
+    fontSize: 38,
+    color: defaultStyles.secondaryColor,
+    marginVertical: 20,
+    textAlign: 'center',
+    fontWeight: 'bold'
   },
   forgotPassword: {
-    color:defaultStyles.secondaryColor,
-    fontSize:16,
-    textAlign:'center',
+    color: defaultStyles.mainColor,
+    fontSize: 16,
+    textAlign: 'center',
     marginVertical: 16
   },
   text: {

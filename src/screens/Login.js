@@ -11,7 +11,7 @@ export default function Login() {
     <View style={styles.container}>
       <Logo/>
       <LoginForm/>
-    
+
     </View>
   )
 }
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: defaultStyles.backgroundColor
+    backgroundColor: defaultStyles.secondaryColor
   },
 
 })

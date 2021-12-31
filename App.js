@@ -8,7 +8,7 @@ import Routes from './src/Routes';
 export default function App() {
   return (
     <AuthProvider>
-      <StatusBar backgroundColor={'#fff'} barStyle={'dark-content'} />
+      <StatusBar backgroundColor={'#272636'} barStyle={'dark-content'} />
       <Routes />
     </AuthProvider>
   )
