@@ -1,5 +1,3 @@
 export function Auth() {
-    
-        return false;
-    
+  return false;
 }

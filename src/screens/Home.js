@@ -1,31 +1,60 @@
 import { useContext } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 
-import Header from '../components/Header'
+
+import defaultStyles from '../assets/defaultStyles'
 
 import { AuthContext } from '../contexts/AuthProvider'
 
+//components
+import PrazosCard from '../components/home/PrazosCard/PrazosCard';
+import RankingCard from '../components/home/RankingCard/RankingCard';
+import PlantaCard from '../components/home/PlantaCard/PlantaCard';
+import Card from '../components/home/Card';
+
+// Components prazos card
+import CardHeader from '../components/home/CardHeader';
+import BoxContainer from '../components/home/PrazosCard/BoxContainer';
+
 export default function Home() {
   const { handleAuthentication } = useContext(AuthContext)
-  
+
   return (
-    <View style={styles.container}>
-      <Text>Home</Text>
-      <TouchableOpacity onPress={handleAuthentication} style={styles.button}>
-        <Text>log out</Text>
-      </TouchableOpacity>
-    </View>
+    <ScrollView style={styles.container} horizontal={true}>
+
+      <PlantaCard />
+      <PrazosCard />
+      <RankingCard />
+
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+    backgroundColor: "white",
+    // backgroundColor:defaultStyles.secondaryColor,
+
+
+    zIndex: 999
   },
-  button: {
-    backgroundColor: 'green',
-    padding: 8 
+
+  cardTop: {
+    width: '100%',
+    alignItems: 'center',
+  },
+  cardTitle: {
+    color: '#444',
+    fontWeight: 'bold',
+    fontSize: 32,
+    marginVertical: 10
+  },
+  line: {
+    width: 100,
+    height: 3,
+    backgroundColor: defaultStyles.mainColor
   }
 })

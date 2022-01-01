@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, Image, TextInput, StyleSheet} from 'react-native';
+import { View, TouchableOpacity, Image, TextInput, StyleSheet } from 'react-native';
 import { useState } from 'react';
 
 //images
@@ -8,58 +8,58 @@ import eyeView from '../../assets/images/show.png';
 import defaultStyles from '../../assets/defaultStyles';
 
 export default function InputPassword() {
-  const [ currentEye, setCurrentEye ] = useState(eyeHide);
-  const [ secureTextEntry, setSecureTextEntry ] = useState(true);
+  const [currentEye, setCurrentEye] = useState(eyeHide);
+  const [secureTextEntry, setSecureTextEntry] = useState(true);
 
   function handleChangePasswordVisibility() {
     if (currentEye == eyeView) {
       setSecureTextEntry(true);
-      setCurrentEye(eyeHide); 
+      setCurrentEye(eyeHide);
     }
-    else{
+    else {
       setSecureTextEntry(false);
-      setCurrentEye(eyeView);       
+      setCurrentEye(eyeView);
     }
   };
-  
-  return(
+
+  return (
     <View style={styles.inputPasswordContainer}>
       <TouchableOpacity style={[styles.showHidePassword]} onPress={handleChangePasswordVisibility}>
         <Image style={styles.eye} source={currentEye} />
       </TouchableOpacity>
-      <TextInput secureTextEntry={secureTextEntry} style={styles.input} placeholder='Senha'/>
+      <TextInput secureTextEntry={secureTextEntry} style={styles.input} placeholder='Senha' />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  input:{
-    width:'100%',
-    height:60,
-    borderWidth:1,
-    borderColor:defaultStyles.mainColor,
-    borderRadius:30,
-    paddingLeft:10,
-    lineHeight:20,
-    fontSize:18,
-    marginTop:10,
-    color:defaultStyles.mainColor,
+  input: {
+    width: '100%',
+    height: 60,
+    borderWidth: 2,
+    borderColor: defaultStyles.secondaryColor,
+    borderRadius: 30,
+    paddingHorizontal: 24,
+    lineHeight: 20,
+    fontSize: 18,
+    marginVertical: 10,
+    color: defaultStyles.textColor,
   },
-  inputPasswordContainer:{
-    width:'100%',
-    
-    position:'relative',
+  inputPasswordContainer: {
+    width: '100%',
+
+    position: 'relative',
   },
-  showHidePassword:{
-    width:32,
-    height:32,
-    position:'absolute',
-    right:15,
-    top:25,
-    zIndex:10,
+  showHidePassword: {
+    width: 32,
+    height: 32,
+    position: 'absolute',
+    right: 15,
+    top: 25,
+    zIndex: 10,
   },
-  eye:{
-    width:'100%',
-    height:'100%',
+  eye: {
+    width: '100%',
+    height: '100%',
   }
 })
