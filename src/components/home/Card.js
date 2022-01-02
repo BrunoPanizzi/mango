@@ -1,29 +1,11 @@
-import { View, Text, StyleSheet } from 'react-native';
-
-import { Dimensions } from 'react-native'
-
-//components
-import CardHeader from './CardHeader';
+import { StyleSheet, Dimensions } from 'react-native'
 
 
-var widthCard = Dimensions.get('window').width - 80;
-var heightCard = Dimensions.get('window').height - (50 + 96) - 20;
-export default function Card() {
-
-  return (
-    <View style={styles.card}>
-      <CardHeader tittle={'Teste'}/>
-
-    </View>
-  )
-}
 const styles = StyleSheet.create({
   card: {
-    // position:'relative',
-    width: widthCard,
-    height: heightCard,
-    marginTop: 10,
-    marginHorizontal: 5,
+    width:  Dimensions.get('screen').width * 0.8,
+    marginHorizontal: 8,
+    height: '100%',
     backgroundColor: 'white',
     borderRadius: 10,
     overflow:'hidden',
@@ -33,6 +15,8 @@ const styles = StyleSheet.create({
       height: 0,
     },shadowOpacity: 1,
     shadowRadius: 20.68,
-    elevation: 10,
+    elevation: 4,
   }
 })
+
+export default styles.card

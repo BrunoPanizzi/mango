@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
 	container: {
 		borderRadius: 8,
 		backgroundColor: defaultStyles.backgroundColor,
+    elevation: 4
 	},
 	days: {
 		width: '100%',

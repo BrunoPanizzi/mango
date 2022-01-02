@@ -2,8 +2,6 @@ import { useContext } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import { Button, View } from 'react-native'
-
 import { AuthContext } from './contexts/AuthProvider'
 
 import Home from './screens/Home'
@@ -16,24 +14,10 @@ const Tab = createBottomTabNavigator();
 
 function LoggedRoutes() {
   return (
-    <>
-
-      <Tab.Navigator
-        tabBarPosition='bottom'
-      >
-        <Tab.Screen
-          name='Home'
-          component={Home}
-          options={{
-            header: () => (
-              <Header/>
-            ),
-
-          }}
-          />
-        <Tab.Screen name='Calendario' component={Calendario}/>
-      </Tab.Navigator>
-    </>
+    <Tab.Navigator screenOptions={{header: Header}} >
+      <Tab.Screen name='Home' component={Home}/>
+      <Tab.Screen name='Calendario' component={Calendario}/>
+    </Tab.Navigator>
   )
 }
 
@@ -44,7 +28,7 @@ export default function Routes() {
     <NavigationContainer>
       {auth
       ? <LoggedRoutes />
-      : <LoggedRoutes />}{/*<Login />}*/}
+      : <Login />}
     </NavigationContainer>
   )
 }

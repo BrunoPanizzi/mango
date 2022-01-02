@@ -1,11 +1,21 @@
-import { Text } from "react-native"
+import { View, StyleSheet } from "react-native"
+
+import defaultStyles from '../assets/defaultStyles'
+
+import Calendar from '../components/Calendar'
 
 export default function Calendario() {
     return(
-        <>
-            <Text>
-                Calendario
-            </Text>
-        </>
+      <View style={styles.container}>
+        <Calendar />
+      </View>
     )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: defaultStyles.backgroundColor,
+    padding: 16
+  }
+})

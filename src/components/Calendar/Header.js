@@ -7,8 +7,8 @@ import AnimatedMonth from './AnimatedMonth'
 
 export default function Header({ currDate, previousMonth, nextMonth }) {
 	const arrowConfig = {
-		size: defaultStyles.spacing.large,
-		color: defaultStyles.colors[700]
+		size: 32,
+		color: defaultStyles.mainColor
 	}
 
 	return (
