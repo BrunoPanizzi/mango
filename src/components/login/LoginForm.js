@@ -44,8 +44,11 @@ export default function LoginForm() {
         <Text style={styles.forgotPassword}>
           Esqueceu sua senha?
         </Text>
-        <Button onPress={handleAuthentication}>
-          Login
+        <Button onPress={() => handleAuthentication('student')}>
+          Login (estudante)
+        </Button>
+        <Button onPress={() => handleAuthentication('teacher')}>
+          Login (professor)
         </Button>
       </View>
       <View>

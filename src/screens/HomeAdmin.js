@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet} from 'react-native';
+import { ScrollView, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 // Components
 import AdminPrazosCard from '../components/home/AdminPrazosCard/AdminPrazosCard';
@@ -6,27 +6,32 @@ import RankingCard from '../components/home/RankingCard/RankingCard';
 import PlantaCard from '../components/home/PlantaCard/PlantaCard';
 
 
-export default function HomeAdmin(){
+export default function HomeAdmin({ navigation }){
   return (
-    <ScrollView style={styles.container} horizontal={true}>
-      <AdminPrazosCard />
-      <PlantaCard />
-      <RankingCard />
+    <View style={styles.container}>
+    {/* isso aqui devia ser gerado com base nas turmas que o professor tem,
+    mas por enquanto é o que tem */}
 
-    </ScrollView>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Class', 'xyz')}>
+        <Text>Ir para turma xyz</Text>
+      </TouchableOpacity>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     position: 'relative',
-    width: '100%',
-    height: '100%',
+    flex: 1,
     backgroundColor: "white",
-    // backgroundColor:defaultStyles.secondaryColor,
-
-
-    zIndex: 999
+    padding: 32,
+    alignItems: 'center'
+  },
+  button: {
+    aspectRatio: 1,
+    width: 150,
+    borderRadius: 16,
+    borderWidth: 1
   }
 })
 

@@ -4,10 +4,10 @@ import { createContext, useState } from 'react'
 export const AuthContext = createContext()
 
 export default function AuthProvider({ children }) {
-	const [auth, setAuth] = useState(true)
+	const [auth, setAuth] = useState('undefined')
 
-	function handleAuthentication() {
-		setAuth(prevAuth => !prevAuth)
+	function handleAuthentication(newAuth) {
+		setAuth(newAuth)
 	}
 
 	return (

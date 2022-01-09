@@ -10,7 +10,7 @@ import CardHeader from '../CardHeader';
 export default function PlantaCard(){
   return(
     <View style={styles.card}>
-      <CardHeader tittle={'Arrombada'}/>
+      <CardHeader tittle={'planta'}/>
     </View>
   )
 }

@@ -1,42 +1,40 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { useContext } from 'react'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 
 import defaultStyles from '../assets/defaultStyles'
 
+import { AuthContext } from '../contexts/AuthProvider'
+
 export default function Header() {
+  const { handleAuthentication } = useContext(AuthContext)
+
   return (
     <View style={styles.container}>
-      <View style={styles.profileHeader}>
+      <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <Image style={styles.profileHeaderImage} />
-        <Text style={styles.profileHeaderText}>Adrian Hoff</Text>
+        <Text style={styles.profileHeaderText}>Nome do usuário</Text>
       </View>
-      <View style={styles.logOut}>
-
-      </View>
+      <TouchableOpacity style={styles.logOut} onPress={() => handleAuthentication('undefined')} >
+        <Text>log out</Text>
+      </TouchableOpacity>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    position:'relative',
-    height:96,
-    width: '100%',
-    justifyContent:'center',
-    paddingHorizontal:16,
-    backgroundColor:'white',
-    zIndex:1,
-    // borderBottomWidth:1,
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: 'white',
+    borderBottomWidth:1,
     borderColor:'#ccc'
   },
-  profileHeader: {
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
   profileHeaderImage: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
+    width: 56,
+    height: 56,
+    borderRadius: 99,
     backgroundColor: '#ccc',
     borderWidth:1,
     borderColor: defaultStyles.mainColor,
@@ -48,7 +46,7 @@ const styles = StyleSheet.create({
     paddingLeft:15
   },
   logOut: {
-
+    backgroundColor: '#555'
   },
 
 })
