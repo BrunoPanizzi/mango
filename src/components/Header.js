@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent:'center',
     paddingHorizontal:16,
-    backgroundColor: defaultStyles.secondaryColor,
+    backgroundColor:'white',
     zIndex:1,
     // borderBottomWidth:1,
     borderColor:'#ccc'
@@ -37,12 +37,13 @@ const styles = StyleSheet.create({
     width: 64,
     height: 64,
     borderRadius: 32,
-    backgroundColor: '#ccc'
+    backgroundColor: '#ccc',
+    borderWidth:1,
+    borderColor: defaultStyles.mainColor,
   },
   profileHeaderText: {
     fontSize:20,
-    // color:defaultStyles.mainColor,
-    color:'white',
+    color:defaultStyles.mainColor,
     fontWeight:'bold',
     paddingLeft:15
   },

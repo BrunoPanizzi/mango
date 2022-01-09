@@ -7,8 +7,8 @@ import AnimatedMonth from './AnimatedMonth'
 
 export default function Header({ currDate, previousMonth, nextMonth }) {
 	const arrowConfig = {
-		size: defaultStyles.spacing.large,
-		color: defaultStyles.colors[700]
+		size: 32,
+		color: defaultStyles.secondaryColor
 	}
 
 	return (
@@ -25,7 +25,8 @@ export default function Header({ currDate, previousMonth, nextMonth }) {
 				</TouchableOpacity>
 			</View>
 			<View style={styles.weekDays}>
-				<Text key={0} style={styles.day}>D</Text>
+        <View style={styles.lineContainer}></View>
+				<Text key={0} style={styles.day}>D</Text><View style={styles.line}></View>
 				<Text key={1} style={styles.day}>S</Text>
 				<Text key={2} style={styles.day}>T</Text>
 				<Text key={3} style={styles.day}>Q</Text>
@@ -38,20 +39,33 @@ export default function Header({ currDate, previousMonth, nextMonth }) {
 }
 
 const styles = StyleSheet.create({
+
 	months: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
+    paddingVertical:20,
+    color:'rgb(100,100,100)'
 	},
+
 	weekDays: {
+    position:'relative',
 		borderRadius: 8,
-		backgroundColor: defaultStyles.mainColor,
+		backgroundColor: defaultStyles.secondaryColor,
 		width: '100%',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		marginVertical: 6,
 	},
+  lineContainer: {
+    position:'absolute',
+    flex:1,
+    backgroundColor:'red'
+  },
+  line:{
+    position:'absolute'
+  },
 	day: {
 		textAlign: 'center',
 		width: '13%',

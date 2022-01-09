@@ -1,11 +1,21 @@
-import { Text } from "react-native"
+import { Text } from "react-native";
+
+import Calendar from '../components/Calendar/index';
+import TaskPopUp from '../components/Calendar/TaskPopUp';
+import AdminPopUp from '../components/Calendar/AdminCalendar/AdminPopUp';
+import AdminAddTaskPopUp from "../components/Calendar/AdminCalendar/AdminAddTaskPopUp";
+
+
 
 export default function Calendario() {
+
+
     return(
         <>
-            <Text>
-                Calendario
-            </Text>
+          <Calendar/>
+          {/* <TaskPopUp/> */}
+          <AdminPopUp/>
+          <AdminAddTaskPopUp/>
         </>
     )
 }

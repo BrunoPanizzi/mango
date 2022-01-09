@@ -1,5 +1,4 @@
-import { StatusBar } from 'react-native'
-import { StyleSheet } from 'react-native'
+import { StatusBar, StyleSheet } from 'react-native';
 
 import AuthProvider from './src/contexts/AuthProvider';
 

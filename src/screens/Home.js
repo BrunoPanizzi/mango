@@ -40,21 +40,5 @@ const styles = StyleSheet.create({
 
 
     zIndex: 999
-  },
-
-  cardTop: {
-    width: '100%',
-    alignItems: 'center',
-  },
-  cardTitle: {
-    color: '#444',
-    fontWeight: 'bold',
-    fontSize: 32,
-    marginVertical: 10
-  },
-  line: {
-    width: 100,
-    height: 3,
-    backgroundColor: defaultStyles.mainColor
   }
 })

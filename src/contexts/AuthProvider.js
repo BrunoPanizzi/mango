@@ -4,7 +4,7 @@ import { createContext, useState } from 'react'
 export const AuthContext = createContext()
 
 export default function AuthProvider({ children }) {
-	const [auth, setAuth] = useState(false)
+	const [auth, setAuth] = useState(true)
 
 	function handleAuthentication() {
 		setAuth(prevAuth => !prevAuth)

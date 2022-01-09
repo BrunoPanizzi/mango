@@ -8,33 +8,38 @@ import { AuthContext } from './contexts/AuthProvider'
 
 import Home from './screens/Home'
 import Calendario from './screens/Calendario'
+import HomeAdmin from './screens/HomeAdmin'
 
 import Login from './screens/Login'
 import Header from './components/Header'
 
+
 const Tab = createBottomTabNavigator();
 
 function LoggedRoutes() {
-  return (
-    <>
 
-      <Tab.Navigator
-        tabBarPosition='bottom'
-      >
-        <Tab.Screen
-          name='Home'
-          component={Home}
-          options={{
-            header: () => (
-              <Header/>
-            ),
+    return (
+      <>
 
-          }}
-          />
-        <Tab.Screen name='Calendario' component={Calendario}/>
-      </Tab.Navigator>
-    </>
-  )
+        <Tab.Navigator
+          tabBarPosition='bottom'
+        >
+          <Tab.Screen
+            name='Home'
+            component={HomeAdmin}
+            options={{
+              header: () => (
+                <Header/>
+              ),
+
+            }}
+            />
+          <Tab.Screen name='Calendario' component={Calendario}/>
+        </Tab.Navigator>
+      </>
+    )
+
+
 }
 
 export default function Routes() {
@@ -44,7 +49,7 @@ export default function Routes() {
     <NavigationContainer>
       {auth
       ? <LoggedRoutes />
-      : <LoggedRoutes />}{/*<Login />}*/}
+      : <Login />}
     </NavigationContainer>
   )
 }
