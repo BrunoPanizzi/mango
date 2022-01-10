@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { StyleSheet, View, Animated } from 'react-native'
 
-import defaultStyles from '../../assets/defaultStyles'
+import defaultStyles from '../../../assets/defaultStyles'
 
 const meses = [
 	'jan',
@@ -135,7 +135,7 @@ export default function AnimatedMonth({ currDate }) {
 const styles = StyleSheet.create({
 	text: {
 		position: 'absolute',
-		color: defaultStyles.textColor,
+		color: defaultStyles.secondaryColor,
 		fontSize: 24,
 		textAlignVertical: 'center'
 	},

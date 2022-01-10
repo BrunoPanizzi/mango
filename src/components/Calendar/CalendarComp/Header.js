@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 
-import defaultStyles from '../../assets/defaultStyles'
+import defaultStyles from '../../../assets/defaultStyles'
 
 import AnimatedMonth from './AnimatedMonth'
 
@@ -25,7 +25,6 @@ export default function Header({ currDate, previousMonth, nextMonth }) {
 				</TouchableOpacity>
 			</View>
 			<View style={styles.weekDays}>
-        <View style={styles.lineContainer}></View>
 				<Text key={0} style={styles.day}>D</Text><View style={styles.line}></View>
 				<Text key={1} style={styles.day}>S</Text>
 				<Text key={2} style={styles.day}>T</Text>
@@ -44,8 +43,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-    paddingVertical:20,
-    color:'rgb(100,100,100)'
+    paddingVertical:12,
 	},
 
 	weekDays: {
@@ -58,14 +56,6 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		marginVertical: 6,
 	},
-  lineContainer: {
-    position:'absolute',
-    flex:1,
-    backgroundColor:'red'
-  },
-  line:{
-    position:'absolute'
-  },
 	day: {
 		textAlign: 'center',
 		width: '13%',
@@ -73,6 +63,6 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		color: defaultStyles.backgroundColor,
 		borderRadius: 8,
-		padding: 6
+		padding: 6,
 	}
 })
