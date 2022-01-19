@@ -1,6 +1,8 @@
 import { View, StyleSheet } from "react-native";
 import { Dimensions } from "react-native";
 
+import CardStyles from "../CardStyles";
+
 var widthCard = Dimensions.get('window').width - 80;
 var heightCard = Dimensions.get('window').height - (50 + 96) - 20;
 
@@ -10,7 +12,7 @@ import ListContainer from "./ListContainer";
 
 export default function RankingCard(){
   return(
-    <View style={styles.card}>
+    <View style={CardStyles}>
       <CardHeader tittle={'Ranking'}/>
       <ListContainer/>
     </View>

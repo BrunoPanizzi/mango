@@ -2,6 +2,9 @@ import { useContext } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Ionicons from '@expo/vector-icons/Ionicons'
+
+import defaultStyles from './assets/defaultStyles'
 
 import { AuthContext } from './contexts/AuthProvider'
 
@@ -16,7 +19,29 @@ const StudentTabs = createBottomTabNavigator();
 
 function Class() {
   return (
-    <StudentTabs.Navigator screenOptions={{header: Header}}>
+    <StudentTabs.Navigator
+      screenOptions={({ route }) => ({
+        header: Header,
+        tabBarShowLabel: false,
+        tabBarIcon: ({ focused, size }) => {
+          let iconName
+
+          if (route.name === 'Home') {
+            iconName = 'home'
+          } else if (route.name === 'Calendario') {
+            iconName = 'calendar'
+          }
+
+          return (
+            <Ionicons
+              name={iconName}
+              size={size}
+              color={focused ? defaultStyles.mainColor : 'gray'}
+            />
+          )
+        }
+      })}
+    >
       <StudentTabs.Screen
         name='Home'
         component={Home}

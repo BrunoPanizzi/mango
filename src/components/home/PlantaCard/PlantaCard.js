@@ -1,15 +1,12 @@
 import { View, Dimensions, StyleSheet } from 'react-native'
 
+import CardStyles from '../CardStyles'
 
-var widthCard = Dimensions.get('window').width - 80;
-var heightCard = Dimensions.get('window').height - (50 + 96) - 20;
-
-//components
 import CardHeader from '../CardHeader';
 
 export default function PlantaCard(){
   return(
-    <View style={styles.card}>
+    <View style={CardStyles}>
       <CardHeader tittle={'planta'}/>
     </View>
   )
@@ -18,8 +15,8 @@ export default function PlantaCard(){
 const styles = StyleSheet.create({
   card: {
     // position:'relative',
-    width: widthCard,
-    height: heightCard,
+    // width: widthCard,
+    // height: heightCard,
     marginTop: 10,
     marginHorizontal: 5,
     backgroundColor: 'white',

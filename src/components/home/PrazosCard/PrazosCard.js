@@ -1,30 +1,30 @@
-import { View, Text, StyleSheet } from 'react-native';
-
-import { Dimensions } from 'react-native'
+import { View, Text, StyleSheet, FlatList } from 'react-native';
 
 //components
 import CardHeader from '../CardHeader';
-import BoxContainer from './BoxContainer';
+import Tarefa from './Tarefa';
+
 import defaultStyles from '../../../assets/defaultStyles';
 
-var widthCard = Dimensions.get('window').width - 80;
-var heightCard = Dimensions.get('window').height - (50 + 96) - 20;
+import MockPrazos from '../../../Mocks/MockPrazos';
+
 export default function Card() {
 
   return (
-    <View style={styles.card}>
-      <CardHeader tittle={'Prazos Próximos'}/>
-      <BoxContainer/>
-    </View>
+    <FlatList
+      style={styles.card}
+      data={MockPrazos}
+      keyExtractor={({ id }) => String(id)}
+      renderItem={({ item }) => <Tarefa {...item} />}
+      ListHeaderComponent={() => <CardHeader tittle='Proximas Tarefas' />}
+      decelerationRate={'fast'}
+    />
   )
 }
 const styles = StyleSheet.create({
   card: {
-    // position:'relative',
-    width: widthCard,
-    height: heightCard,
-    marginTop: 10,
-    marginHorizontal: 5,
+    flex: 1,
+    padding: 4,
     backgroundColor: 'white',
     borderRadius: 10,
     overflow:'hidden',

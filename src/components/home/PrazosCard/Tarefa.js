@@ -1,14 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
 
-import { SocialIcon } from "react-native-elements/dist/social/SocialIcon";
-
 import defaultStyles from "../../../assets/defaultStyles";
-import MockPrazos from '../../../Mocks/MockPrazos'
 
-export default function PrazosBox({tittle, text, data}){
-
+export default function Tarefa({tittle, text, data}){
   return (
-
     <View style={styles.container}>
       <Text style={styles.title}>{tittle}</Text>
       <Text style={styles.text}>{text}</Text>
@@ -25,15 +20,14 @@ const styles = StyleSheet.create({
   container: {
     width:'100%',
     padding:10,
-
-
   },
   title: {
     fontSize: 20,
     color:defaultStyles.mainColor,
     fontWeight:'bold'
   },
-  text :{
+  text : {
+    maxHeight: 64,
     fontSize:16,
     color:'gray',
     textAlign:'justify',
