@@ -13,6 +13,7 @@ import Calendario from './screens/Calendario'
 import HomeAdmin from './screens/HomeAdmin'
 import Login from './screens/Login'
 import Header from './components/Header'
+import NovaTarefa from './screens/NovaTarefa'
 
 
 const StudentTabs = createBottomTabNavigator();
@@ -59,6 +60,7 @@ function TeacherRoutes() {
     <TeacherStack.Navigator >
       <TeacherStack.Screen name='Home' component={HomeAdmin} options={{header: Header}}/>
       <TeacherStack.Screen name='Class' component={Class} options={{headerShown: false}} />
+      <TeacherStack.Screen name='NovaTarefa' component={NovaTarefa} />
     </TeacherStack.Navigator>
   )
 }

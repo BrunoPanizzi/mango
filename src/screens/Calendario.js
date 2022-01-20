@@ -1,11 +1,16 @@
+import { useContext } from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native';
 
 import { CalendarProvider } from '../contexts/CalendarContext'
+import { AuthContext } from '../contexts/AuthProvider'
 
 import CalendarComp from '../components/Calendar/CalendarComp/';
 import Events from '../components/Calendar/Events'
+import NovaTarefa from '../components/Calendar/NovaTarefa';
 
 export default function Calendario() {
+  const { auth } = useContext(AuthContext)
+
   return(
     <CalendarProvider>
       <ScrollView style={{flex: 1, backgroundColor: '#fff'}} contentContainerStyle={styles.container}>
@@ -14,6 +19,7 @@ export default function Calendario() {
         </View>
         <Events />
       </ScrollView>
+        {auth === 'teacher' && <NovaTarefa />}
     </CalendarProvider>
   )
 }

@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   text : {
     maxHeight: 66,
     fontSize:16,
+
     color:'gray',
     textAlign:'justify',
     padding:5,
