@@ -8,17 +8,15 @@ export default function Tarefa({tittle, text, data}){
       <Text style={styles.title}>{tittle}</Text>
       <Text style={styles.text}>{text}</Text>
       <View style={styles.bottomBox}>
-        <View style={styles.checkbox} ></View>
         <Text style={styles.data}>{data}</Text>
       </View>
-      <View style={styles.line}></View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    width:'100%',
+    width: 250,
     padding:10,
   },
   title: {
@@ -27,7 +25,7 @@ const styles = StyleSheet.create({
     fontWeight:'bold'
   },
   text : {
-    maxHeight: 64,
+    maxHeight: 66,
     fontSize:16,
     color:'gray',
     textAlign:'justify',
@@ -36,8 +34,10 @@ const styles = StyleSheet.create({
   bottomBox:{
     flexDirection:'row',
     alignItems:'center',
-    justifyContent:'space-between'
-  },checkbox: {
+    justifyContent:'space-between',
+    marginVertical: 8
+  },
+  checkbox: {
     width:18,
     height:18,
     borderRadius:4,

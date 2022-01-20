@@ -11,14 +11,15 @@ import MockPrazos from '../../../Mocks/MockPrazos';
 export default function Card() {
 
   return (
-    <FlatList
-      style={styles.card}
-      data={MockPrazos}
-      keyExtractor={({ id }) => String(id)}
-      renderItem={({ item }) => <Tarefa {...item} />}
-      ListHeaderComponent={() => <CardHeader tittle='Proximas Tarefas' />}
-      decelerationRate={'fast'}
-    />
+    <View style={styles.card}>
+      <CardHeader tittle='Proximas Tarefas' />
+      <FlatList
+        data={MockPrazos}
+        keyExtractor={({ id }) => String(id)}
+        renderItem={({ item }) => <Tarefa {...item} />}
+        horizontal
+      />
+    </View>
   )
 }
 const styles = StyleSheet.create({
@@ -34,6 +35,6 @@ const styles = StyleSheet.create({
       height: 0,
     },shadowOpacity: 1,
     shadowRadius: 20.68,
-    elevation: 10,
+    elevation: 5,
   }
 })

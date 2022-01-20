@@ -16,14 +16,14 @@ export default function RankingBox({ id, tittle, integrantes, cor }) {
         borderColor: defaultStyles.secondaryColor,
         alignItems:'center',
         justifyContent:'center',
-
-        shadowColor: "black",
-        shadowOffset: {
-          width: 0,
-          height: 0,
-        },shadowOpacity: 1,
-        shadowRadius: 20.68,
-        elevation: 10,
+        borderWidth: 1,
+        // shadowColor: "black",
+        // shadowOffset: {
+        //   width: 0,
+        //   height: 0,
+        // },shadowOpacity: 1,
+        // shadowRadius: 20.68,
+        // elevation: 10,
       }}>
         <Text style={styles.positionNumber}>{id}</Text>
       </View>

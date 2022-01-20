@@ -2,9 +2,10 @@ import { Dimensions, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   card: {
-    width: Dimensions.get('window').width * 0.8 ,
-    marginHorizontal: 8,
+    width: '100%',
+    maxHeight: Dimensions.get('window').height - 64,
     backgroundColor: 'white',
+    marginBottom: 16,
     borderRadius: 10,
     overflow:'hidden',
     shadowColor: "black",

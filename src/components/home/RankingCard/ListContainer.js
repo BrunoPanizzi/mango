@@ -8,13 +8,11 @@ import RankingBox from "./RankingBox";
 
 export default function ListContainer(params) {
   return(
-    <View style={styles.container}>
-      <FlatList
-        data={MockRanking}
-        renderItem={({item}) => <RankingBox {...item}/>}
-        keyExtractor={({id}) => String(id)}
-      />
-    </View>
+    <FlatList
+      data={MockRanking}
+      renderItem={({item}) => <RankingBox {...item}/>}
+      keyExtractor={({id}) => String(id)}
+    />
   )
 }
 
