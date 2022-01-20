@@ -1,25 +1,20 @@
-import { useState } from 'react';
-import { View, ScrollView, Text, StyleSheet } from 'react-native';
+import { View, ScrollView, StyleSheet } from 'react-native';
+
+import { CalendarProvider } from '../contexts/CalendarContext'
 
 import CalendarComp from '../components/Calendar/CalendarComp/';
-
-import defaultStyles from '../assets/defaultStyles';
 import Events from '../components/Calendar/Events'
 
 export default function Calendario() {
-  const [selectedDay, setSelectedDay] = useState()
-
   return(
-    <ScrollView style={{flex: 1, backgroundColor: '#fff'}} contentContainerStyle={styles.container}>
-      <View style={styles.calendarContainer}>
-        <CalendarComp
-          selectedDay={selectedDay}
-          setSelectedDay={setSelectedDay}
-        />
-      </View>
-
-      <Events selectedDay={selectedDay} />
-    </ScrollView>
+    <CalendarProvider>
+      <ScrollView style={{flex: 1, backgroundColor: '#fff'}} contentContainerStyle={styles.container}>
+        <View style={styles.calendarContainer}>
+          <CalendarComp />
+        </View>
+        <Events />
+      </ScrollView>
+    </CalendarProvider>
   )
 }
 

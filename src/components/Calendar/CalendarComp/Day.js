@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
+import { useCalendarContext } from '../../../contexts/CalendarContext';
+
 import defaultStyles from '../../../assets/defaultStyles';
 
 import isSameDay from '../../../utils/isSameDay';
 
-// console.log(selectedDay());
-export default function Day({ day, isThisMonth, isThisWeekendDay, selectedDay, setSelectedDay }) {
+export default function Day({ day, isThisMonth, isThisWeekendDay }) {
+  const { selectedDay, setSelectedDay } = useCalendarContext()
 
   return (
     <TouchableOpacity style={styles.container} onPress={() => setSelectedDay(day)} >
@@ -66,6 +68,6 @@ const styles = StyleSheet.create({
   },
   selectedDay: {
     borderWidth: 2,
-    borderColor: defaultStyles.mainColor
+    borderColor: defaultStyles.secondaryColor,
   }
 })
